@@ -15,7 +15,7 @@ export default function Home() {
         />
         <ol>
           <li>
-            Get started by editing <code>src/app/page.tsx</code>.
+            Get starby editing <code>src/app/page.tsx</code>.
           </li>
           <li>Hello World - Jesus Salatiel</li>
         </ol>
