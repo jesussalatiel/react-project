@@ -1,4 +1,3 @@
-// next.config.js
 const nextConfig = {
     output: 'export', // Exporta la aplicación como archivos estáticos
     distDir: 'build', // Especifica la carpeta de salida como 'build'
