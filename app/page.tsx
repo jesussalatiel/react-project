@@ -1,8 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { generateClient } from "aws-amplify/data";
-import type { Schema } from "@/amplify/data/resource";
+// import { useState, useEffect } from "react";
+import { useEffect } from "react";
+// import { generateClient } from "aws-amplify/data";
+// import type { Schema } from "@/amplify/data/resource";
 import styles from "./App.module.css"; // Usar CSS Modules
 import { Amplify } from "aws-amplify";
 import "@aws-amplify/ui-react/styles.css";
@@ -18,21 +19,21 @@ Amplify.configure({
 });
 
 // Genera el cliente de Amplify con tipos fuertes
-const client = generateClient<Schema>();
+// const client = generateClient<Schema>();
 
 export default function App() {
-  const [todos, setTodos] = useState<Array<Schema["Todo"]["type"]>>([]);
+  // const [todos, setTodos] = useState<Array<Schema["Todo"]["type"]>>([]);
 
   // Función para listar los todos
-  function listTodos() {
-    const subscription = client.models.Todo.observeQuery().subscribe({
-      next: (data) => setTodos([...data.items]),
-      error: (error) => console.error("Error fetching todos:", error),
-    });
+  // function listTodos() {
+    // const subscription = client.models.Todo.observeQuery().subscribe({
+      // next: (data) => setTodos([...data.items]),
+      // error: (error) => console.error("Error fetching todos:", error),
+    // });
 
     // Retorna la función de limpieza
-    return () => subscription.unsubscribe();
-  }
+    // return () => subscription.unsubscribe();
+  // }
 
   // Efecto para suscribirse a los cambios de los todos
   useEffect(() => {
@@ -57,11 +58,11 @@ export default function App() {
         + New Todo
       </button>
       <ul className={styles.todoList}>
-        {todos.map((todo) => (
-          <li key={todo.id} className={styles.todoItem}>
-            {todo.content}
-          </li>
-        ))}
+        {/* {todos.map((todo) => ( */}
+          {/* <li key={todo.id} className={styles.todoItem}> */}
+            {/* {todo.content} */}
+          {/* </li> */}
+        {/* ))} */}
       </ul>
       <div className={styles.footer}>
         🥳 App successfully hosted. Try creating a new todo.
